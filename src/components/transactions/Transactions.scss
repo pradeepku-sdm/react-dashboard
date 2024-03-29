@@ -1,0 +1,90 @@
+@import "../../index.scss";
+
+.trans {
+    background-color: $light;
+    padding: 15px;
+    border-radius: 15px;
+
+    .transHeader {
+        @include itemPosition(center, space-between);
+
+        h1 {
+            font-size: 25px;
+            color: $darkText;
+        }
+
+        .date {
+            font-size: 16px;
+            color: $lightText;
+        }
+    }
+
+    .transItemBox {
+
+        .item {
+            @include itemPosition(center, space-between);
+            margin: 20px 0;
+
+            .details {
+                @include itemPosition(center, flex-start);
+                gap: 10px;
+
+                .icon {
+                    @include roundShape(40px, $light);
+                    border: 1px solid $danger;
+                    color: $danger;
+                    font-size: 30px;
+
+                    &.success {
+                        border: 1px solid $success;
+                        color: $success;
+                    }
+                }
+
+                .name {
+                    color: $darkText;
+                    margin-bottom: 0;
+                    font-weight: 600;
+                }
+
+                .time {
+                    color: $lightText;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                }
+            }
+
+            .value {
+                color: $danger;
+
+                h4 {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+
+                &.success {
+                    color: $success;
+                }
+            }
+        }
+    }
+}
+
+.edit-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.edit-icon img {
+    width: 30px;
+    height: 30px;
+}

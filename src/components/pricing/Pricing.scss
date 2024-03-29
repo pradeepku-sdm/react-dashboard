@@ -1,0 +1,83 @@
+@import "../../index.scss";
+
+.pricing {
+    .head {
+        text-align: center;
+        max-width: 768px;
+        margin: auto;
+
+        h1 {
+            font-weight: 700;
+            color: $darkText;
+        }
+
+        p {
+            font-weight: 500;
+            color: $lightText;
+        }
+    }
+
+    .time {
+        @include itemPosition(center, center);
+        gap: 10px;
+        margin: 50px auto;
+        background-color: rgba($color: $primary, $alpha: 0.1);
+        width: fit-content;
+        border-radius: 15px;
+
+        .timeTab {
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 14px;
+            cursor: pointer;
+
+            &.active {
+                background: $light;
+            }
+        }
+
+    }
+
+    .planBox {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5.5px;
+        padding: 15px;
+        border-radius: 15px;
+        background-color: $light;
+
+        .plan {
+            background-color: rgba($color: $primary, $alpha: 0.1);
+            color: $darkText;
+            border-radius: 65px;
+            padding: 5px 15px;
+            text-align: center;
+            width: fit-content;
+            margin: 15px auto;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: 700;
+            color: $darkText;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+
+            li {
+                margin: 10px 0;
+
+                svg {
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 10px;
+                }
+
+                color: $lightText;
+            }
+        }
+    }
+}

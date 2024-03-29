@@ -1,0 +1,237 @@
+@import "../../index.scss";
+
+.profileHeader {
+    @include itemPosition(center, space-between);
+    gap: 10px;
+    border: 2px solid $light;
+    background: $secondary;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 2px 5.5px;
+    flex-wrap: wrap;
+
+    .userInfo {
+        @include itemPosition(center, flex-start);
+        gap: 10px;
+        flex-wrap: wrap;
+
+        img {
+            @include squareShape(80px, 80px, transparent, 15px);
+            object-fit: cover;
+        }
+
+        .detail {
+            h5 {
+                font-size: 18px;
+                color: $darkText;
+            }
+
+            h4 {
+                font-size: 16px;
+                color: $mediumText;
+            }
+        }
+
+    }
+
+    .tabs {
+        @include itemPosition(center, flex-start);
+        gap: 20px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+
+        .tabItem {
+            border-radius: 10px;
+            color: $darkText;
+            font-weight: 15px;
+            @include itemPosition(center, flex-start);
+            gap: 5px;
+
+            cursor: pointer;
+
+
+            &.active {
+                background-color: $light;
+                padding: 5px 15px;
+                box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 5.5px;
+            }
+
+        }
+    }
+}
+
+.profileDetails {
+    .card {
+        height: 100%;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: $darkText;
+            margin-bottom: 20px;
+        }
+
+        .toggleSection {
+            margin-bottom: 15px;
+
+            h4 {
+                font-size: 18px;
+                font-weight: 500;
+                color: $mediumText;
+            }
+
+            .toggleList {
+                .form-check {
+                    margin: 15px 0;
+                }
+            }
+        }
+
+        p {
+            color: $mediumText;
+
+            span {
+                color: $darkText;
+                font-weight: 600;
+                margin-right: 3px;
+            }
+        }
+
+        .conversationList {
+            .listItem {
+                gap: 10px;
+                @include itemPosition(center, space-between);
+                margin: 10px 0;
+                flex-wrap: wrap;
+
+                .profile {
+                    gap: 10px;
+                    @include itemPosition(center, flex-start);
+
+                    img {
+                        @include squareShape(60px, 60px, transparent, 5px);
+                        object-fit: cover;
+                    }
+
+                    .desc {
+                        .name {
+                            color: $darkText;
+                            font-size: 14px;
+                            font-weight: 700;
+                        }
+
+                        .message {
+                            color: $mediumText;
+                            font-size: 12px;
+                            max-width: 180px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                    }
+                }
+
+                .replay {
+                    a {
+                        font-weight: 700;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:576px) {
+
+    .profileHeader {
+
+        .tabs {
+            padding-bottom: 10px;
+        }
+    }
+
+    .profileDetails {
+        .card {
+            height: 100%;
+
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+                color: $darkText;
+                margin-bottom: 20px;
+            }
+
+            .toggleSection {
+                margin-bottom: 15px;
+
+                h4 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: $mediumText;
+                }
+
+                .toggleList {
+                    .form-check {
+                        margin: 15px 0;
+                    }
+                }
+            }
+
+            p {
+                color: $mediumText;
+
+                span {
+                    color: $darkText;
+                    font-weight: 600;
+                    margin-right: 3px;
+                }
+            }
+
+            .conversationList {
+                .listItem {
+                    gap: 10px;
+                    @include itemPosition(center, space-between);
+                    margin: 10px 0;
+                    flex-wrap: wrap;
+
+                    .profile {
+                        gap: 10px;
+                        @include itemPosition(center, flex-start);
+
+                        img {
+                            @include squareShape(60px, 60px, transparent, 5px);
+                            object-fit: cover;
+                        }
+
+                        .desc {
+                            .name {
+                                color: $darkText;
+                                font-size: 14px;
+                                font-weight: 700;
+                            }
+
+                            .message {
+                                color: $mediumText;
+                                font-size: 12px;
+                                max-width: 90px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+
+                        }
+                    }
+
+                    .replay {
+                        a {
+                            font-weight: 700;
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

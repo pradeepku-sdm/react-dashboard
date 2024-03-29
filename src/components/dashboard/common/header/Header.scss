@@ -1,0 +1,47 @@
+@import "../../../../index.scss";
+
+header {
+    @include itemPosition(center, space-between);
+    gap: 10px;
+    margin-left: 250px;
+    padding: 15px;
+    height: 90px;
+    position: sticky;
+    top: 0;
+    background-color: $background;
+    transition: all 0.4s;
+    z-index: 1;
+
+    .tools {
+        @include itemPosition(center, flex-end);
+        gap: 10px;
+
+        .search {
+            position: relative;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translateY(-50%);
+                width: 15px;
+            }
+
+            input {
+                padding-left: 30px;
+            }
+        }
+
+        .auth {
+            @include itemPosition(center, flex-start);
+            gap: 10px;
+            color: $darkText;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    header {
+        margin-left: 0px;
+    }
+}

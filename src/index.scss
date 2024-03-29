@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+@import 'react-big-calendar/lib/sass/styles';
+@import 'react-big-calendar/lib/addons/dragAndDrop/styles';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// Common Colors 
+
+$primary: #4FD1C5;
+$secondary: #CFFCF7;
+$light: #ffffff;
+$dark: #000000;
+$background: #F7FAFC;
+$lightText: #A0AEC0;
+$mediumText: #718096;
+$darkText: #1f2733;
+$border: #E2E8F0;
+$border: #E2E8F0;
+$danger: #E53E3E;
+$success: #38A169;
+
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  background: $background !important;
+}
+
+//Common Buttons
+
+.btn {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+
+}
+
+.btn-main {
+  background-color: $light !important;
+  border: 1px solid $primary !important;
+  color: $primary !important;
+
+  &:hover {
+    background-color: $primary !important;
+    color: $light !important;
+
+    a {
+      color: $light;
+    }
+
+  }
+}
+
+.btn-dark {
+  background: linear-gradient(81.62deg, rgb(49, 56, 96) 2.25%, rgb(21, 25, 40) 79.87%);
+  color: $light;
+}
+
+.btn-theme {
+  background-color: $primary !important;
+  color: $light !important;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+//commpn Mixins
+
+@mixin itemPosition($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin roundShape($width, $bgColor) {
+  @include itemPosition(center, center);
+  width: $width;
+  height: $width;
+  border-radius: 50%;
+  background-color: $bgColor;
+}
+
+@mixin squareShape($width, $height, $bgColor, $radius) {
+  @include itemPosition(center, center);
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  background-color: $bgColor;
+}
+
+// Custom Scroll 
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $background;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $lightText;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $lightText;
+}
+
+// form 
+
+input,
+select,
+textarea {
+  box-shadow: none !important;
+  border: 1px solid $border;
+  border-radius: 10px !important;
+  font-size: 16px !important;
+
+  &:focus {
+    border: 1px solid $primary !important;
+  }
+}
+
+button {
+  box-shadow: none !important;
+}
+
+// Common Classes
+
+.centerMid {
+  @include itemPosition(center, center)
+}
+
+.spcBtwn {
+  @include itemPosition(center, space-between)
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
+}
+
+.gap {
+  gap: 10px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.white-space {
+  white-space: nowrap;
+}
+
+
+.form-check-input:checked {
+  background-color: $primary;
+  border-color: $primary;
+}

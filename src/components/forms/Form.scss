@@ -1,0 +1,16 @@
+@import "../../index.scss";
+
+.form {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: $light;
+
+    .inputField {
+        margin: 10px 0;
+
+        label {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+    }
+}

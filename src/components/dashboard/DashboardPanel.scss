@@ -1,0 +1,21 @@
+@import "../../index.scss";
+
+.main {
+    background: $background;
+}
+
+.dashboardContent {
+    background-color: $background;
+    border-radius: 15px;
+    margin: 0 15px 15px 250px;
+    color: $dark;
+    padding: 15px;
+    transition: all 0.4s;
+}
+
+@media only screen and (max-width: 1200px) {
+    .dashboardContent {
+        margin: 0px;
+        padding: 0;
+    }
+}

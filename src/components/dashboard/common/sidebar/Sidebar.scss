@@ -1,0 +1,103 @@
+@import "../../../../index.scss";
+
+section.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    padding: 10px;
+    background-color: $background;
+    transition: all 0.4s;
+    z-index: 1;
+
+    .logo {
+        img {
+            width: 100%;
+            margin: auto;
+            display: block;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, rgb(224, 225, 226) 49.52%, rgba(224, 225, 226, 0) 100%)
+        }
+    }
+
+    .pageList {
+        height: calc(100vh - 200px);
+        overflow-y: auto;
+
+        ul.accordion {
+            list-style: none;
+            padding-left: 0;
+
+            li.accordion-box {
+
+                .accordion-item {
+                    border: none;
+                    padding: 8px;
+                    background-color: $background;
+
+                    h2.accordion-header {
+                        button {
+                            box-shadow: none;
+                            background-color: $background;
+                            @include itemPosition(center, flex-start);
+                            gap: 10px;
+                            padding: 8px;
+                            color: $lightText;
+                            font-weight: 500;
+
+                            .icon {
+                                @include squareShape(30px, 30px, $light, 8px)
+                            }
+
+                            &.active {
+                                background-color: $light;
+                            }
+
+                            &:hover {
+
+                                box-shadow: rgba(0, 0, 0, 0.04) 0px 7px 11px;
+                            }
+                        }
+                    }
+
+                    .accordion-collapse {
+                        background-color: $background;
+
+                        .accordion-body {
+                            border-radius: 0 0 8px 8px;
+                            background-color: $light;
+                            padding: 0 10px 10px;
+
+                            ul {
+
+                                li {
+                                    color: $primary;
+                                    padding-top: 15px;
+                                    cursor: pointer;
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    section.sidebar {
+        transform: translateX(-250px);
+
+        &.toggle {
+            transform: translateX(0px);
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import "../../../index.scss";
+
+img.authBg {
+    width: 100%;
+    height: calc(100vh - 30px);
+    object-fit: cover;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+img.logo {
+    max-width: 200px;
+    margin: 20px auto;
+
+}
+
+.authForm {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: $light;
+    max-width: 400px;
+
+    .inputField {
+        margin: 10px 0;
+
+        label {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+    }
+
+    p {
+        font-weight: 600;
+        color: $darkText;
+    }
+}
