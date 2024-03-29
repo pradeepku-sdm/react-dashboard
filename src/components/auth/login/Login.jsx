@@ -38,7 +38,7 @@ function Login() {
                                         </div>
                                     </div>
                                     <div className="col-12 mb-3">
-                                        <button className="btn btn-main">Sign In</button>
+                                        <button className="btn btn-main"><NavLink to="dashboard"> Sign In</NavLink></button>
                                     </div>
                                     <div className="col-12">
                                         <p>Don't have an account <NavLink to="/signup">Signup</NavLink></p>

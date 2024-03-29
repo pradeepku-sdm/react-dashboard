@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "./common/sidebar/Sidebar";
 import Header from "./common/header/Header";
 import "./DashboardPanel.scss";
@@ -8,10 +8,15 @@ import Profile from "../profile/Profile";
 import { Outlet } from "react-router-dom";
 
 function DashboardPanel() {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
     return (
         <div className="main">
-            <Sidebar />
-            <Header />
+            <Sidebar isSidebarOpen={isSidebarOpen} />
+            <Header toggle={toggleSidebar} />
             {/* <div className="dashboardContent">
                 <Profile />
 
@@ -38,7 +43,7 @@ function DashboardPanel() {
                 </div>
             </div> */}
 
-            <div className="dashboardContent">
+            <div className="dashboardContent p-2">
                 <Outlet />
             </div>
         </div>

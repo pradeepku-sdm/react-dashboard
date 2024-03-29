@@ -20,18 +20,17 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<Homepage />}/>
+        <Route path='/' element={<Login />}/>
         <Route path='dashboard' element={<DashboardPanel />}>
+        <Route path='' element={<Report />}/>
         <Route path='profile' element={<Profile />}/>
         <Route path='form' element={<Form />}/>
         <Route path='cards' element={< DescriptionCard/>}/>
         <Route path='chart' element={< Charts/>}/>
         <Route path='pricing' element={<Pricing />}/>
         <Route path='transaction' element={<Transactions />}/>
-        <Route path='reports' element={<Report />}/>
         <Route path='calender' element={<Calender />}/>
           </Route>
-        <Route path='login' element={<Login />}/>
         <Route path='signup' element={<Signup />}/>
         <Route path='*' element={<Notfound />}/>
       </Routes>    

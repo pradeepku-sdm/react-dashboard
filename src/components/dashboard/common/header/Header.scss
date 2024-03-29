@@ -8,9 +8,10 @@ header {
     height: 90px;
     position: sticky;
     top: 0;
-    background-color: $background;
+    background-color: $light;
     transition: all 0.4s;
     z-index: 1;
+
 
     .tools {
         @include itemPosition(center, flex-end);
@@ -32,10 +33,42 @@ header {
             }
         }
 
-        .auth {
+        .profile {
             @include itemPosition(center, flex-start);
             gap: 10px;
+
+            .img {
+                img {
+                    @include roundShape(40px, transparent);
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .auth {
+            @include itemPosition(center, flex-start);
+            gap: 0px;
             color: $darkText;
+        }
+
+        .dropdown {
+            .dropdown-menu {
+                padding: 10px;
+                border-radius: 20px;
+                z-index: 1;
+            }
+
+            .dropdown-item {
+                &.active {
+                    background-color: $primary;
+                    border-radius: 10px;
+                }
+            }
+
+            .card {
+                overflow: hidden;
+            }
+
         }
     }
 }

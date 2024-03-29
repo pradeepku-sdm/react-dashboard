@@ -1,20 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Sidebar.scss"
 import Logo from "../../../../assets/images/logo.png";
-import { FaHome } from "react-icons/fa";
-import { FaToolbox } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
+// import { FaHome } from "react-icons/fa";
+// import { FaToolbox } from "react-icons/fa";
+// import { FaUser } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
-function Sidebar() {
+const Sidebar = ({ isSidebarOpen }) => {
     return (
-        <section className="sidebar">
+        <section className={isSidebarOpen ? 'sidebar toggle' : 'sidebar'}>
             <div className="logo">
                 <img src={Logo} alt="" />
                 <div className="line"></div>
             </div>
             <div className="pageList">
-                <ul className="accordion" id="accordionExample">
+                <div className="listItem">
+                    <ul>
+                        <NavLink to=""> <li>Dashboard </li></NavLink>
+                        <NavLink to="profile"><li>Profile </li></NavLink>
+                        <NavLink to="form"><li>Form</li></NavLink>
+                        <NavLink to="cards"><li>Cards</li></NavLink>
+                        <NavLink to="chart"><li>Charts</li></NavLink>
+                        <NavLink to="pricing"><li>Pricing</li></NavLink>
+                        <NavLink to="transaction"><li>Transaction</li></NavLink>
+                        <NavLink to="calender"><li>Calender</li></NavLink>
+                    </ul>
+                </div>
+                {/* <ul className="accordion" id="accordionExample">
                     <li className="accordion-box">
                         <div className="accordion-item">
                             <h2 className="accordion-header" id="headingOne">
@@ -25,13 +37,13 @@ function Sidebar() {
                             <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div className="accordion-body">
                                     <ul>
+                                        <li><NavLink to="">Dashboard</NavLink> </li>
                                         <li><NavLink to="profile">Profile</NavLink> </li>
                                         <li><NavLink to="form">Form</NavLink> </li>
                                         <li><NavLink to="cards">Cards</NavLink> </li>
                                         <li><NavLink to="chart">Charts</NavLink> </li>
                                         <li><NavLink to="pricing">Pricing</NavLink> </li>
                                         <li><NavLink to="transaction">Transaction</NavLink> </li>
-                                        <li><NavLink to="reports">Reports</NavLink> </li>
                                         <li><NavLink to="calender">Calender</NavLink> </li>
                                     </ul>
                                 </div>
@@ -76,7 +88,7 @@ function Sidebar() {
                             </div>
                         </div>
                     </li>
-                </ul>
+                </ul> */}
             </div>
         </section>
     )
