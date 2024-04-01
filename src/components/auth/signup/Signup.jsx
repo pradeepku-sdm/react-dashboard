@@ -42,10 +42,10 @@ export const Signup = () => {
                                         </div>
                                     </div>
                                     <div className="col-12 mb-3">
-                                        <button className="btn btn-main">Sign Up</button>
+                                        <button className="btn btn-main"><NavLink to="/dashboard">Sign Up</NavLink></button>
                                     </div>
                                     <div className="col-12">
-                                        <p>Already have an account? <NavLink to="/login">Sign In</NavLink></p>
+                                        <p>Already have an account? <NavLink to="/">Sign In</NavLink></p>
                                     </div>
                                 </div>
                             </form>

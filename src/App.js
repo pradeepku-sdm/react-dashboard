@@ -28,7 +28,10 @@ function App() {
   }
   return (
     <div>
-
+       <Routes>
+ <Route path='/' element={<Login />} />
+ <Route path='signup' element={<Signup />} />
+ </Routes>
       <div className="main">
 
 
@@ -36,7 +39,7 @@ function App() {
         <Header toggle={toggleSidebar} />
         <div className="dashboardContent p-2">
           <Routes>
-            <Route path='/' element={<Login />} />
+           
             <Route path='dashboard' element={<Report />} />
             {/* <Route path='' element={<Report />}/> */}
             <Route path='profile' element={<Profile />} />
@@ -47,7 +50,7 @@ function App() {
             <Route path='transaction' element={<Transactions />} />
             <Route path='calender' element={<Calender />} />
 
-            <Route path='signup' element={<Signup />} />
+         
             <Route path='*' element={<Notfound />} />
           </Routes>
           <Outlet />

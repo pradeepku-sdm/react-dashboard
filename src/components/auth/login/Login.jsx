@@ -41,7 +41,7 @@ function Login() {
                                         <button className="btn btn-main"><NavLink to="dashboard"> Sign In</NavLink></button>
                                     </div>
                                     <div className="col-12">
-                                        <p>Don't have an account <NavLink to="/signup">Signup</NavLink></p>
+                                        <p>Don't have an account <NavLink to="/signup">Sign Up</NavLink></p>
                                     </div>
                                 </div>
                             </form>

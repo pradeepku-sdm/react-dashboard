@@ -20,7 +20,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                         <li><NavLink to="cards">Cards</NavLink></li>
                         <li><NavLink to="chart">Charts</NavLink></li>
                         <li><NavLink to="pricing">Pricing</NavLink></li>
-                       <li><NavLink to="transaction">Transaction</NavLink></li>
+                        <li><NavLink to="transaction">Transaction</NavLink></li>
                         <li><NavLink to="calender">Calender</NavLink></li>
                         <li className="accordion-box">
                         <div className="accordion-item">
@@ -40,7 +40,7 @@ const Sidebar = ({ isSidebarOpen }) => {
                                 </div>
                             </div>
                         </div>
-                    </li>
+                       </li>
                     </ul>
                 </div>
                
