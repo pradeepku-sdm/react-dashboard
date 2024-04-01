@@ -6,7 +6,9 @@ import { RiTeamFill } from "react-icons/ri";
 import { AiFillProject } from "react-icons/ai";
 
 function Profile() {
-    return <div className="container-fluid">
+    return(
+        <>
+         <div className="container-fluid">
         <div className="row">
             <div className="col-12 mb-4">
                 <div className="profileHeader">
@@ -136,5 +138,8 @@ function Profile() {
             </div>
         </div>
     </div>
+        </>
+    ) 
+   
 }
 export default Profile;

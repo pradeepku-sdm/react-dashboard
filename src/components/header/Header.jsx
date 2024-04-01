@@ -5,7 +5,7 @@ import { IoSettings } from "react-icons/io5";
 import { FaBell } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { CiMenuBurger } from "react-icons/ci";
-import Profile from "../../../../assets/images/profile.jpg";
+import Profile from "../../assets/images/profile.jpg";
 import { NavLink } from "react-router-dom";
 
 const Header = ({ toggle }) => {
